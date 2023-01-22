@@ -1,8 +1,12 @@
-name: nixpkgs-hs
+name: hsnix-nixpkgs
 version: 0.1.0.0
 author: "Jose Lane"
 license: MIT
 maintainer: dariankline@outlook.com
+
+extra-source-files:
+  - src/HsNixPkgs/StdEnv/Linux/BootstrapTools/unpack-bootstrap-tools-musl.sh
+  - src/HsNixPkgs/StdEnv/Linux/BootstrapTools/unpack-bootstrap-tools.sh
 
 ghc-options:
   - -Wall
@@ -17,11 +21,26 @@ ghc-options:
 
 default-extensions:
   - OverloadedStrings
+  - StandaloneDeriving
 
 dependencies:
-  - base >= 4.7 && < 5
-  - text >= 1.2 && < 2
-  - nix-core
+  - base ^>= 4.15
+  - text ^>= 1.2
+  - data-default ^>= 0.7
+  - hsnix-core
 
 library:
   source-dirs: src
+  other-modules:
+    - HsNixPkgs.HSScript.Internal.BuildMod
+    - HsNixPkgs.HSScript.Internal.BuildMod.TH
+    - HsNixPkgs.HSScript.Internal.BuildMod.Types
+  dependencies:
+    - template-haskell ^>= 2.17
+    - mtl ^>= 2.2
+    - containers ^>= 0.6
+    - hashable ^>= 1.3
+    - unordered-containers ^>= 0.2
+    - filepath ^>= 1.4
+    - directory ^>= 1.3
+    - shell-gen

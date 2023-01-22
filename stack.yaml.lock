@@ -5,6 +5,49 @@
 
 packages:
 - completed:
+    filepath: ../nix-core/hsnix-core/.stack-work/dist/x86_64-linux-nix/Cabal-3.4.1.0/hsnix-core-0.1.0.0.tar.gz
+    name: hsnix-core
+    pantry-tree:
+      sha256: 76225f3b33d5ac71e0232d41378a0a0b773d9b2a240d68321bec95e90f985cd1
+      size: 704
+    sha256: cad38266cf8ba4b82b9c97a0752d762068d0c47afefa3f3330d67998a2490d31
+    size: 5288
+    version: 0.1.0.0
+  original:
+    filepath: ../nix-core/hsnix-core/.stack-work/dist/x86_64-linux-nix/Cabal-3.4.1.0/hsnix-core-0.1.0.0.tar.gz
+    sha256: cad38266cf8ba4b82b9c97a0752d762068d0c47afefa3f3330d67998a2490d31
+- completed:
+    filepath: ../shell-gen/.stack-work/dist/x86_64-linux-nix/Cabal-3.4.1.0/shell-gen-0.1.0.0.tar.gz
+    name: shell-gen
+    pantry-tree:
+      sha256: fe3f563179616d8e4a64a712eaed59200f4b76202db4656bdb7fb8c443d7f422
+      size: 815
+    sha256: 2e7e91c91b34e43d82feec4fb702e1acedce0837c2bef82639bd858d4b3de8e9
+    size: 14122
+    version: 0.1.0.0
+  original:
+    filepath: ../shell-gen/.stack-work/dist/x86_64-linux-nix/Cabal-3.4.1.0/shell-gen-0.1.0.0.tar.gz
+    sha256: 2e7e91c91b34e43d82feec4fb702e1acedce0837c2bef82639bd858d4b3de8e9
+- completed:
+    filepath: ../elfutil/.stack-work/dist/x86_64-linux-nix/Cabal-3.4.1.0/elfutil-0.1.0.0.tar.gz
+    name: elfutil
+    pantry-tree:
+      sha256: 242b9322b1ec38e9e61f687f03b2f27eab938fe35888b0c243964126f19afad4
+      size: 656
+    sha256: 44ca71e79287fa7d012c0f67e63cc12f673329bf154e1a953ba026a5a5181942
+    size: 4933
+    version: 0.1.0.0
+  original:
+    filepath: ../elfutil/.stack-work/dist/x86_64-linux-nix/Cabal-3.4.1.0/elfutil-0.1.0.0.tar.gz
+    sha256: 44ca71e79287fa7d012c0f67e63cc12f673329bf154e1a953ba026a5a5181942
+- completed:
+    hackage: melf-1.1.0@sha256:4da174d843a7b9277eb75c0b280c75628e4a43865fa0f5ecc9403b4fd8e53835,5199
+    pantry-tree:
+      sha256: 159c8df3d5cff783029908e052f4e4fb136cfc5b31bfe288bffdf334f5f82bc0
+      size: 3427
+  original:
+    hackage: melf-1.1.0@sha256:4da174d843a7b9277eb75c0b280c75628e4a43865fa0f5ecc9403b4fd8e53835,5199
+- completed:
     hackage: hnix-0.16.0@sha256:b70b9dd55ec597da8cee95ddc2b3bb0c63f4ccedd075caae5784a7d7934d4b0b,21558
     pantry-tree:
       sha256: e45f25c6ebcd2e93fc39d496ea951358f5c573248ecc841fec1c10142bdb8946
@@ -32,17 +75,6 @@ packages:
       size: 4128
   original:
     hackage: algebraic-graphs-0.5@sha256:6eeec5ed1687ff7aa916e7bf9f02f51aaabde6f314dc0b7b1a84156974d7da73,8071
-- completed:
-    name: nix-core
-    pantry-tree:
-      sha256: b020c64f0d40b8738025e178f9efbfbabd232de76abcab5000b4537945fa7a7e
-      size: 623
-    sha256: eeb2bbc22a9bd4a6d6594bdde2100764ab4af5a8fdde6b17a4e5259046d181c6
-    size: 6097
-    url: https://github.com/Forist2034/nix-core/archive/7c02e7006e46cc2c2d8ab7f24bfb3a08ee210277.tar.gz
-    version: 0.1.0.0
-  original:
-    url: https://github.com/Forist2034/nix-core/archive/7c02e7006e46cc2c2d8ab7f24bfb3a08ee210277.tar.gz
 snapshots:
 - completed:
     sha256: 6d1532d40621957a25bad5195bfca7938e8a06d923c91bc52aa0f3c41181f2d4

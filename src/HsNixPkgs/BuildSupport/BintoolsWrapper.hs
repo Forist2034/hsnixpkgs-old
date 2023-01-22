@@ -1,0 +1,1 @@
+module HsNixPkgs.BuildSupport.BintoolsWrapper where

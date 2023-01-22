@@ -4,26 +4,27 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 
-name:           nixpkgs-hs
+name:           embed-sdist
 version:        0.1.0.0
 author:         Jose Lane
 maintainer:     dariankline@outlook.com
 license:        MIT
-license-file:   LICENSE
 build-type:     Simple
 
 library
   exposed-modules:
-      Lib
+      Data.EmbedSdist
   other-modules:
-      Paths_nixpkgs_hs
+      Paths_embed_sdist
   hs-source-dirs:
       src
-  default-extensions:
-      OverloadedStrings
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
-      base >=4.7 && <5
-    , nix-core
-    , text >=1.2 && <2
+      Cabal ==3.4.*
+    , base ==4.15.*
+    , directory ==1.3.*
+    , filepath ==1.4.*
+    , hsnix-core
+    , template-haskell ==2.17.*
+    , text ==1.2.*
   default-language: Haskell2010

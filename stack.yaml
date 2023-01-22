@@ -2,15 +2,33 @@ resolver:
   url: https://github.com/commercialhaskell/stackage-snapshots/raw/master/lts/19/33.yaml
 
 packages:
+  - embed-sdist
+  - hsnixpkgs-builder-lib
+  - hsnixpkgs-builder
+  - runbuilder
   - .
 
 extra-deps:
+  #- github: Forist2034/nix-core
+  #  commit: 089eebe9332abef4cff60cdbd78c0a4368ca956a
+  #  subdirs:
+  #    - hsnix-core
+  #    - hsnix-nixdrv
+  #- github: Forist2034/shell-gen
+  #  commit: b268fd15d46ea56753634b462266128ce76063fd
+  - archive: ../nix-core/hsnix-core/.stack-work/dist/x86_64-linux-nix/Cabal-3.4.1.0/hsnix-core-0.1.0.0.tar.gz
+    sha256: cad38266cf8ba4b82b9c97a0752d762068d0c47afefa3f3330d67998a2490d31
+  - archive: ../shell-gen/.stack-work/dist/x86_64-linux-nix/Cabal-3.4.1.0/shell-gen-0.1.0.0.tar.gz
+    sha256: 2e7e91c91b34e43d82feec4fb702e1acedce0837c2bef82639bd858d4b3de8e9
+  - archive: ../elfutil/.stack-work/dist/x86_64-linux-nix/Cabal-3.4.1.0/elfutil-0.1.0.0.tar.gz
+    sha256: 44ca71e79287fa7d012c0f67e63cc12f673329bf154e1a953ba026a5a5181942
+  - melf-1.1.0@sha256:4da174d843a7b9277eb75c0b280c75628e4a43865fa0f5ecc9403b4fd8e53835,5199
+  # hsnix-nixdrv deps (testing only)
   - hnix-0.16.0@sha256:b70b9dd55ec597da8cee95ddc2b3bb0c63f4ccedd075caae5784a7d7934d4b0b,21558
   - hnix-store-core-0.5.0.0@sha256:16084729c4df762f438bd0f564b17d9555a2ce53c172af357de35dec8c81c747,3112
   - hnix-store-remote-0.5.0.0@sha256:98938101cbf9e5d8287e5f2abdf6461b46972b4d92987cf8634273913feef65c,2297
   - algebraic-graphs-0.5@sha256:6eeec5ed1687ff7aa916e7bf9f02f51aaabde6f314dc0b7b1a84156974d7da73,8071
-  - github: Forist2034/nix-core
-    commit: 7c02e7006e46cc2c2d8ab7f24bfb3a08ee210277
 
+# hsnix-nixdrv deps (testing only)
 nix:
   packages: [zlib, pkg-config, libsodium]

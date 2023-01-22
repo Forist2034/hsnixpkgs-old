@@ -1,0 +1,79 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.35.0.
+--
+-- see: https://github.com/sol/hpack
+
+name:           hsnix-nixpkgs
+version:        0.1.0.0
+author:         Jose Lane
+maintainer:     dariankline@outlook.com
+license:        MIT
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    src/HsNixPkgs/StdEnv/Linux/BootstrapTools/unpack-bootstrap-tools-musl.sh
+    src/HsNixPkgs/StdEnv/Linux/BootstrapTools/unpack-bootstrap-tools.sh
+
+library
+  exposed-modules:
+      HsNixPkgs.BuildSupport.BintoolsWrapper
+      HsNixPkgs.BuildSupport.Fetcher.Url.Boot
+      HsNixPkgs.BuildSupport.SetupHooks.AuditTmpDir
+      HsNixPkgs.BuildSupport.SetupHooks.CompressManPages
+      HsNixPkgs.BuildSupport.SetupHooks.MakeSymlinkRelative
+      HsNixPkgs.BuildSupport.SetupHooks.Move
+      HsNixPkgs.BuildSupport.SetupHooks.MultipleOutput
+      HsNixPkgs.BuildSupport.SetupHooks.PatchShebang
+      HsNixPkgs.BuildSupport.SetupHooks.PruneLibtoolFiles
+      HsNixPkgs.BuildSupport.SetupHooks.Strip
+      HsNixPkgs.ConfigSet
+      HsNixPkgs.Develop.Compiler.GCC
+      HsNixPkgs.Develop.Compiler.GCC.Wrapper
+      HsNixPkgs.Develop.Lang.Haskell.Types
+      HsNixPkgs.ExtendDrv
+      HsNixPkgs.HSScript
+      HsNixPkgs.PkgConfig
+      HsNixPkgs.Shell
+      HsNixPkgs.Shell.Util
+      HsNixPkgs.StdEnv
+      HsNixPkgs.StdEnv.Boot
+      HsNixPkgs.StdEnv.Generic.Dependent
+      HsNixPkgs.StdEnv.Generic.MakeDerivation
+      HsNixPkgs.StdEnv.Generic.Phrases
+      HsNixPkgs.StdEnv.Generic.Phrases.Standard
+      HsNixPkgs.StdEnv.Linux
+      HsNixPkgs.StdEnv.Linux.BootstrapFiles
+      HsNixPkgs.StdEnv.Linux.BootstrapTools
+      HsNixPkgs.System
+      HsNixPkgs.System.Abi
+      HsNixPkgs.System.Cpu
+      HsNixPkgs.System.Kernel
+      HsNixPkgs.System.Vendor
+      HsNixPkgs.Types
+      HsNixPkgs.Util
+      HsNixPkgs.Util.TH
+  other-modules:
+      HsNixPkgs.HSScript.Internal.BuildMod
+      HsNixPkgs.HSScript.Internal.BuildMod.TH
+      HsNixPkgs.HSScript.Internal.BuildMod.Types
+  hs-source-dirs:
+      src
+  default-extensions:
+      OverloadedStrings
+      StandaloneDeriving
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
+  build-depends:
+      base ==4.15.*
+    , containers ==0.6.*
+    , data-default ==0.7.*
+    , directory ==1.3.*
+    , filepath ==1.4.*
+    , hashable ==1.3.*
+    , hsnix-core
+    , mtl ==2.2.*
+    , shell-gen
+    , template-haskell ==2.17.*
+    , text ==1.2.*
+    , unordered-containers ==0.2.*
+  default-language: Haskell2010
